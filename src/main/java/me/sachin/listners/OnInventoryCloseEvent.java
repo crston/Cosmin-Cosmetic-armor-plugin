@@ -45,7 +45,7 @@ public class OnInventoryCloseEvent implements Listener {
     public void event(InventoryCloseEvent e) {
         Player p = (Player) e.getPlayer();
         List<ItemStack> list = Arrays.asList(e.getInventory().getContents());
-        if (!p.hasPermission("cosmin.command.fakeequip") || !p.hasPermission("cosmin.command.open")){
+        if (!p.hasPermission("cosmin.command.fakeequip")){
             return;
         }
         else if(PlayerUtils.getCurrentlyEditedInventory().containsKey(p)){
